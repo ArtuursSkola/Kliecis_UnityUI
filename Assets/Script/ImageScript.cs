@@ -9,9 +9,8 @@ public class ImageScript : MonoBehaviour
     public GameObject female;
     public Sprite[] spriteArray;
     public GameObject imageHolder;
-    public GameObject sizeSlider;
-    public GameObject rotationSlider;
-
+    public Slider SliderHeight;
+    public Slider SliderWidth;
 
 
     public void showfemale(bool value)
@@ -32,21 +31,20 @@ public class ImageScript : MonoBehaviour
 
         else if (index == 1)
             imageHolder.GetComponent<Image>().sprite = spriteArray[1];
-
-        //else if (index == 2)
-            //imageHolder.GetComponent<Image>().sprite = spriteArray[2];
     }
 
 
-    public void changeSize()
+    public void changeHeight(float height)
     {
-        float size = sizeSlider.GetComponent<Slider>().value;
-        imageHolder.transform.localScale = new Vector2(1F * size, 1F * size);
+        Debug.Log("New Height " + height);
+        float width = imageHolder.GetComponent<RectTransform>().sizeDelta.x;
+        imageHolder.GetComponent<RectTransform>().sizeDelta = new Vector2(width, height);
+    }
+    public void changeWidth(float width)
+    {
+        Debug.Log("New Width " + width);
+        float height = imageHolder.GetComponent<RectTransform>().sizeDelta.y;
+        imageHolder.GetComponent<RectTransform>().sizeDelta = new Vector2(width, height);
+    }
     }
 
-    public void changeRotation()
-    {
-        float rotation = rotationSlider.GetComponent<Slider>().value;
-        imageHolder.transform.localRotation = Quaternion.Euler(0, 0, rotation * 360);
-    }
-}
