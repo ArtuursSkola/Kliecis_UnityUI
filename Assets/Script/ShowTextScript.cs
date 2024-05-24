@@ -18,9 +18,24 @@ public class ShowTextScrip : MonoBehaviour
     {
         randomNumb = Random.Range(0, words.Length);
         text = inputField.GetComponent<InputField>().text;
-        num = int.Parse(inputField2.GetComponent<InputField>().text);
-        int currentYear = System.DateTime.Now.Year;
-        displayField.GetComponent<Text>().text =
-                                words[randomNumb] + text.ToLower() + " You're "+(currentYear - num) + " years old";
+        if (inputField2 != null && !string.IsNullOrEmpty(inputField2.GetComponent<InputField>().text))
+        {
+            if (int.TryParse(inputField2.GetComponent<InputField>().text, out num))
+            {
+                int currentYear = System.DateTime.Now.Year;
+                displayField.GetComponent<Text>().text =
+                                        words[randomNumb] + text.ToLower() + " You're " + (currentYear - num) + " years old";
+            }
+            else
+            {
+                displayField.GetComponent<Text>().text = "Please enter a valid number in the second input field";
+            }
+        }
+        else
+        {
+            displayField.GetComponent<Text>().text = "Please fill in both input fields";
+        }
     }
-}
+        
+    }
+
