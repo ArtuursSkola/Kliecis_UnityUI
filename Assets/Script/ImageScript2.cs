@@ -21,7 +21,9 @@ public class ImageScript2 : MonoBehaviour
     public GameObject pants1;
     public GameObject pants2;
     public GameObject pants3;
- 
+    public GameObject shield1;
+    public GameObject shield2;
+    public GameObject shield3;
 
     public GameObject CharHolder;
     public Sprite[] SpriteArray;
@@ -44,6 +46,12 @@ public class ImageScript2 : MonoBehaviour
         shirt1.SetActive(value);
         shirt2.SetActive(value);
         shirt3.SetActive(value);
+    }
+    public void showShield(Boolean value)
+    {
+        shield1.SetActive(value);
+        shield2.SetActive(value);
+        shield3.SetActive(value);
     }
     public void showAmulet(Boolean value)
     {
