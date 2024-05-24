@@ -10,6 +10,7 @@ public class ImageScript2 : MonoBehaviour
     public GameObject hat3;
     public GameObject boots1;
     public GameObject boots2;
+    public GameObject bootss2;
     public GameObject boots3;
     public GameObject shirt1;
     public GameObject shirt2;
@@ -20,6 +21,7 @@ public class ImageScript2 : MonoBehaviour
     public GameObject pants1;
     public GameObject pants2;
     public GameObject pants3;
+ 
 
     public GameObject CharHolder;
     public Sprite[] SpriteArray;
@@ -28,6 +30,7 @@ public class ImageScript2 : MonoBehaviour
     {
         boots1.SetActive(value);
         boots2.SetActive(value);
+        bootss2.SetActive(value);
         boots3.SetActive(value);
     }
     public void showHat(Boolean value)
