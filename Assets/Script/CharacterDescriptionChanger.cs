@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CharacterDescriptionChanger : MonoBehaviour
 {
     public Dropdown dropD;
-
     public Text characterDescriptionText;
 
     public string maleCharacterDescription = "Bjorn Ironfist, son of Regnar the Third, was a renowned medieval warrior celebrated for his strength and skill in combat. Standing tall and imposing, he wielded his war hammer with unmatched ferocity, earning him the moniker 'Ironfist.' Victorious in battles that defined his era, including the famous duel with Thorgar the Merciless, Bjorn's leadership united clans and secured his kingdom's prosperity. Yet, his legacy extended beyond the battlefield; he was revered for his sense of justice and dedication to his people, ushering in an era of peace and prosperity. Today, his name echoes through history as a symbol of courage and valor.";
